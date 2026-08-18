@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop | Montama</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="navbar">
+<a href="index.html" class="logo">MONTAMA</a>
+<nav><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="shop.html?category=Boxing%20Gloves">Gloves</a><a href="shop.html?category=Shin%20Guards">Shin Guards</a></nav>
+<div class="nav-actions"><a href="cart.html">🛒 <span id="cartCount">0</span></a></div>
+</header>
+
+<main class="section">
+<div class="section-title">
+<p class="eyebrow">MONTAMA SHOP</p>
+<h1>ALL EQUIPMENT</h1>
+</div>
+<div class="shop-controls">
+<input id="searchInput" type="search" placeholder="Search equipment...">
+<select id="categoryFilter">
+<option value="">All categories</option>
+<option>Boxing Gloves</option>
+<option>Shin Guards</option>
+<option>Hand Wraps</option>
+<option>Head Guards</option>
+<option>Mouthguards</option>
+</select>
+</div>
+<div id="shopProducts" class="product-grid"></div>
+</main>
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/shop.js"></script>
+</body>
+</html>
