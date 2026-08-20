@@ -2,7 +2,7 @@ function renderCart() {
 
     const items =
         getCart();
-
+    
 
     const box =
         document.getElementById(
