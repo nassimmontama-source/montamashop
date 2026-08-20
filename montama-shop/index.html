@@ -1,65 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Montama Shop | Kickboxing Equipment</title>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Montama Shop | Kickboxing Equipment</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
 <header class="navbar">
-  <a href="index.html" class="logo">MONTAMA</a>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="shop.html">Shop</a>
-    <a href="shop.html?category=Boxing%20Gloves">Gloves</a>
-    <a href="shop.html?category=Shin%20Guards">Shin Guards</a>
-    <a href="shop.html?category=Hand%20Wraps">Hand Wraps</a>
-  </nav>
-  <div class="nav-actions">
-    <a href="cart.html">🛒 <span id="cartCount">0</span></a>
-  </div>
+
+    <a href="index.html" class="logo">
+        MONTAMA
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="shop.html?category=Boxing%20Gloves">Gloves</a>
+        <a href="shop.html?category=Shin%20Guards">Shin Guards</a>
+        <a href="shop.html?category=Hand%20Wraps">Hand Wraps</a>
+    </nav>
+
+    <div class="nav-actions">
+        <a href="cart.html">
+            🛒 <span id="cartCount">0</span>
+        </a>
+    </div>
+
 </header>
 
+
 <main>
+
 <section class="hero">
-  <div class="hero-content">
-    <p class="eyebrow">MONTAMA KICKBOXING</p>
-    <h1>FIGHT<br>WITH <span>CONFIDENCE.</span></h1>
-    <p>Kickboxing equipment built for training, sparring and competition.</p>
-    <a href="shop.html" class="button">SHOP NOW</a>
-  </div>
+
+    <div class="hero-content">
+
+        <p class="eyebrow">
+            MONTAMA KICKBOXING
+        </p>
+
+        <h1>
+            FIGHT<br>
+            WITH <span>CONFIDENCE.</span>
+        </h1>
+
+        <p>
+            Kickboxing equipment built for training,
+            sparring and competition.
+        </p>
+
+        <a href="shop.html" class="button">
+            SHOP NOW
+        </a>
+
+    </div>
+
 </section>
 
-<section class="section">
-  <div class="section-title">
-    <p class="eyebrow">EXPLORE</p>
-    <h2>SHOP BY CATEGORY</h2>
-  </div>
-  <div class="category-grid">
-    <a class="category-card" href="shop.html?category=Boxing%20Gloves"><h3>Boxing Gloves</h3><span>SHOP →</span></a>
-    <a class="category-card" href="shop.html?category=Shin%20Guards"><h3>Shin Guards</h3><span>SHOP →</span></a>
-    <a class="category-card" href="shop.html?category=Hand%20Wraps"><h3>Hand Wraps</h3><span>SHOP →</span></a>
-  </div>
-</section>
 
 <section class="section">
-  <div class="section-title">
-    <p class="eyebrow">MONTAMA</p>
-    <h2>FEATURED EQUIPMENT</h2>
-  </div>
-  <div id="featuredProducts" class="product-grid"></div>
+
+    <div class="section-title">
+        <p class="eyebrow">EXPLORE</p>
+        <h2>SHOP BY CATEGORY</h2>
+    </div>
+
+    <div class="category-grid">
+
+        <a class="category-card"
+           href="shop.html?category=Boxing%20Gloves">
+
+            <h3>Boxing Gloves</h3>
+            <span>SHOP →</span>
+
+        </a>
+
+
+        <a class="category-card"
+           href="shop.html?category=Shin%20Guards">
+
+            <h3>Shin Guards</h3>
+            <span>SHOP →</span>
+
+        </a>
+
+
+        <a class="category-card"
+           href="shop.html?category=Hand%20Wraps">
+
+            <h3>Hand Wraps</h3>
+            <span>SHOP →</span>
+
+        </a>
+
+    </div>
+
 </section>
+
+
+<section class="section">
+
+    <div class="section-title">
+
+        <p class="eyebrow">
+            MONTAMA
+        </p>
+
+        <h2>
+            FEATURED EQUIPMENT
+        </h2>
+
+    </div>
+
+    <div
+        id="featuredProducts"
+        class="product-grid">
+    </div>
+
+</section>
+
 </main>
 
+
 <footer>
-  <div><h2>MONTAMA</h2><p>Kickboxing equipment for fighters.</p></div>
-  <div><h3>SHOP</h3><a href="shop.html">All Products</a><a href="shop.html?category=Boxing%20Gloves">Gloves</a><a href="shop.html?category=Shin%20Guards">Shin Guards</a></div>
-  <div><h3>HELP</h3><a href="#">Contact</a><a href="#">Delivery</a><a href="#">Returns</a></div>
+
+    <div>
+        <h2>MONTAMA</h2>
+
+        <p>
+            Kickboxing equipment for fighters.
+        </p>
+    </div>
+
+
+    <div>
+
+        <h3>SHOP</h3>
+
+        <a href="shop.html">
+            All Products
+        </a>
+
+        <a href="shop.html?category=Boxing%20Gloves">
+            Gloves
+        </a>
+
+        <a href="shop.html?category=Shin%20Guards">
+            Shin Guards
+        </a>
+
+    </div>
+
+
+    <div>
+
+        <h3>HELP</h3>
+
+        <a href="#">
+            Contact
+        </a>
+
+        <a href="#">
+            Delivery
+        </a>
+
+        <a href="#">
+            Returns
+        </a>
+
+    </div>
+
 </footer>
+
 
 <script src="js/products.js"></script>
 <script src="js/cart.js"></script>
 <script src="js/app.js"></script>
+
 </body>
 </html>
