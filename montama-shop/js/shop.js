@@ -1,11 +1,169 @@
-const params=new URLSearchParams(location.search);
-const searchInput=document.getElementById("searchInput");
-const categoryFilter=document.getElementById("categoryFilter");
-if(params.get("category"))categoryFilter.value=params.get("category");
-function renderShop(){
- const q=(searchInput.value||"").toLowerCase(), cat=categoryFilter.value;
- const list=products.filter(p=>p.active&&(!cat||p.category===cat)&&(!q||`${p.name} ${p.category} ${p.description}`.toLowerCase().includes(q)));
- document.getElementById("shopProducts").innerHTML=list.length?list.map(productCard).join(""):"<p>No products found.</p>";
+const params =
+    new URLSearchParams(
+        location.search
+    );
+
+
+const searchInput =
+    document.getElementById(
+        "searchInput"
+    );
+
+
+const categoryFilter =
+    document.getElementById(
+        "categoryFilter"
+    );
+
+
+const category =
+    params.get("category");
+
+
+if (category) {
+
+    categoryFilter.value =
+        category;
+
 }
-searchInput.addEventListener("input",renderShop); categoryFilter.addEventListener("change",renderShop); renderShop();
-function productCard(p){return `<a class="product-card" href="product.html?id=${p.id}"><div class="product-image"><img src="${p.image}" alt="${p.name}"></div><div class="product-info"><p class="product-category">${p.category}</p><h3>${p.name}</h3><div class="product-rating">⭐ ${p.rating} (${p.reviews})</div><div class="product-price">${p.price} MAD</div></div></a>`;}
+
+
+function renderShop() {
+
+    const search =
+        (
+            searchInput.value || ""
+        ).toLowerCase();
+
+
+    const selectedCategory =
+        categoryFilter.value;
+
+
+    const list =
+        products.filter(product => {
+
+            if (!product.active) {
+                return false;
+            }
+
+
+            if (
+                selectedCategory &&
+                product.category !==
+                selectedCategory
+            ) {
+
+                return false;
+
+            }
+
+
+            const searchableText =
+
+                `${product.name}
+                ${product.category}
+                ${product.description}`
+                    .toLowerCase();
+
+
+            if (
+                search &&
+                !searchableText.includes(search)
+            ) {
+
+                return false;
+
+            }
+
+
+            return true;
+
+        });
+
+
+    const container =
+        document.getElementById(
+            "shopProducts"
+        );
+
+
+    if (!list.length) {
+
+        container.innerHTML =
+            "<p>No products found.</p>";
+
+        return;
+
+    }
+
+
+    container.innerHTML =
+        list.map(shopProductCard).join("");
+
+}
+
+
+function shopProductCard(product) {
+
+    return `
+
+        <a
+            class="product-card"
+            href="product.html?id=${product.id}"
+        >
+
+            <div class="product-image">
+
+                <img
+                    src="${product.image}"
+                    alt="${product.name}"
+                >
+
+            </div>
+
+
+            <div class="product-info">
+
+                <p class="product-category">
+                    ${product.category}
+                </p>
+
+
+                <h3>
+                    ${product.name}
+                </h3>
+
+
+                <div class="product-rating">
+                    ⭐ ${product.rating}
+                    (${product.reviews})
+                </div>
+
+
+                <div class="product-price">
+                    ${product.price} MAD
+                </div>
+
+            </div>
+
+        </a>
+
+    `;
+
+}
+
+
+searchInput.addEventListener(
+    "input",
+    renderShop
+);
+
+
+categoryFilter.addEventListener(
+    "change",
+    renderShop
+);
+
+
+renderShop();
